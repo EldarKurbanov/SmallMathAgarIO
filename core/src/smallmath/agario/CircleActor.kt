@@ -1,5 +1,6 @@
 package smallmath.agario
 
+import com.badlogic.gdx.graphics.Color
 import com.badlogic.gdx.graphics.g2d.Batch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.scenes.scene2d.Actor
@@ -12,7 +13,6 @@ class CircleActor: Actor() {
 
     init {
         shapeRenderer = ShapeRenderer()
-
         addListener(object : InputListener() {
             override fun keyUp(event: InputEvent?, keycode: Int): Boolean {
                 return super.keyUp(event, keycode)
@@ -30,6 +30,7 @@ class CircleActor: Actor() {
         shapeRenderer.transformMatrix = batch.transformMatrix
 
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled)
+        shapeRenderer.color = Color.BLACK
         shapeRenderer.circle(0f, 0f, 50f)
         shapeRenderer.end()
 
