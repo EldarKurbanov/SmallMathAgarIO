@@ -9,10 +9,9 @@ import com.badlogic.gdx.scenes.scene2d.InputListener
 
 class CircleActor: Actor() {
 
-    val shapeRenderer: ShapeRenderer
+    val shapeRenderer: ShapeRenderer = ShapeRenderer()
 
     init {
-        shapeRenderer = ShapeRenderer()
         addListener(object : InputListener() {
             override fun keyUp(event: InputEvent?, keycode: Int): Boolean {
                 return super.keyUp(event, keycode)
