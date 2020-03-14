@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.InputListener
 
 class CircleActor: Actor() {
 
-    val shapeRenderer: ShapeRenderer = ShapeRenderer()
+    private val shapeRenderer: ShapeRenderer = ShapeRenderer()
 
     init {
         addListener(object : InputListener() {
