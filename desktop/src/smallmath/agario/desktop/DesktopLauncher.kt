@@ -8,6 +8,7 @@ object DesktopLauncher {
     @JvmStatic
     fun main(arg: Array<String>) {
         val config = LwjglApplicationConfiguration()
+            config.samples = 3
         LwjglApplication(MyAgarIOGame(), config)
     }
 }
